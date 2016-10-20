@@ -16,4 +16,6 @@ gulp.task('deploy-github', shell.task([
 ]));
 var iaas = require('/usr/local/lib/node_modules/gitbook-start-iaas-aitor-joshua-samuel/lib/lib.js');
 var json = require('./package.json');
-gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});
+gulp.task('deploy-iaas', function() {
+  iaas(json.iaasip,json.iaaspath);
+});

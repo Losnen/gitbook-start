@@ -43,5 +43,5 @@
     "gulp-shell": "^0.5.2"
   },
   "iaasip": "10.6.128.174",
-  "iaaspath": "src/prueba"
+  "iaaspath": "src/prueba/prueba"
 }
