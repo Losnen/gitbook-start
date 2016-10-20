@@ -14,4 +14,6 @@ gulp.task('deploy-github', shell.task([
   'git commit -m "modificando"',
   'git push origin master'
 ]));
-var iaas = require('/usr/local/lib/node_modules/gitbook-start-iaas-aitor-joshua-samuel/lib/lib.js'); var json = require('./package.json'); gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});
+var iaas = require('/usr/local/lib/node_modules/gitbook-start-iaas-aitor-joshua-samuel/lib/lib.js');
+var json = require('./package.json');
+gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});
