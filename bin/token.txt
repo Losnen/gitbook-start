@@ -1,18 +1,18 @@
 {
-  "id": 59097151,
-  "url": "https://api.github.com/authorizations/59097151",
+  "id": 59101086,
+  "url": "https://api.github.com/authorizations/59101086",
   "app": {
-    "name": 7449,
+    "name": "SYTW-6967",
     "url": "https://developer.github.com/v3/oauth_authorizations/",
     "client_id": "00000000000000000000"
   },
-  "token": "743f57b885ff4ccf9b2a903d48f641b30a134435",
-  "hashed_token": "064ee1e7d9088f60e236a59496cdf9091c9410babeffe60dbf9fc81da9595dc1",
-  "token_last_eight": "0a134435",
-  "note": 7449,
+  "token": "bc69b4d63eb6c69db6e72e045afae6da999a1bb2",
+  "hashed_token": "8d7e1fef756a040707720e262d099249ec32fe09d98ddbabc6d971ffba494971",
+  "token_last_eight": "999a1bb2",
+  "note": "SYTW-6967",
   "note_url": null,
-  "created_at": "2016-11-03T16:57:13Z",
-  "updated_at": "2016-11-03T16:57:13Z",
+  "created_at": "2016-11-03T17:15:29Z",
+  "updated_at": "2016-11-03T17:15:29Z",
   "scopes": [
     "repo",
     "user"

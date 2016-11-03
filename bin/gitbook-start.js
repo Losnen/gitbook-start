@@ -72,7 +72,7 @@ function puts(error, stdout, stderr) {
       
     }
 var id = Math.floor((Math.random() * 10000) + 1)
-var prueba = exec("curl -u " + answer + " -d '{\"scopes\": [\"repo\", \"user\"], \"note\":"+id+"}' https://api.github.com/authorizations",puts);
+var prueba = exec("curl -u " + answer + " -d '{\"scopes\": [\"repo\", \"user\"], \"note\":\"SYTW-"+id+"\"}' https://api.github.com/authorizations",puts);
 //console.log(prueba)
   rl.close();
 //});
