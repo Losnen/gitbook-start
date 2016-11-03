@@ -42,6 +42,7 @@ if (argv.n) {
 
 } else if (argv.u){
     var answer=argv.u;
+    var token_
     //rl.question('Indique cual es su nombre de usuario, luego pulse enter y escriba su password(se veráde forma oculta): ', (answer) => {
   // TODO: Log the answer in a database
   //console.log('Thank you for your valuable feedback:', answer);
@@ -51,7 +52,9 @@ function puts(error, stdout, stderr) {
         //var json= JSON.stringify(stdout);
         //console.log(json)
         var respuesta = JSON.parse(stdout)
+        token_ = respuesta['token']
         //console.log(respuesta['token'])
+        console.log(token_)
         fs.writeFile('./token.txt', stdout, function(err) {
             if( err ){
                 //console.log( err );
@@ -60,6 +63,26 @@ function puts(error, stdout, stderr) {
                 //console.log('Se ha escrito correctamente');
             }
         });
+
+            var client = github.client(token_.trim());
+            var ghme = client.me();
+
+            client.get('/user', {}, function(err, status, body, headers) {
+                console.log("Email: " + body.email);
+                console.log("Nombre: " + body.name);
+            });
+
+            ghme.repo({
+                "name": "Hello",
+                "description": "This is your first repo",
+            }, function(err, status, body, headers) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log("Su repo se ha creado con éxito");
+                }
+            });
+        
         //console.log(respuesta)
         //var response = stdout.token
         //console.log(stdout.token)

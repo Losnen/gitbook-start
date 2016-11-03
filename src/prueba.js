@@ -14,7 +14,7 @@ fs.readFile('./.ghtoken', 'utf8', function(err, token) {
     });
 
     ghme.repo({
-        "name": "Hello-World",
+        "name": "MyRepo",
         "description": "This is your first repo",
     }, function(err, status, body, headers) {
         if (err) {
