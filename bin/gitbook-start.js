@@ -42,7 +42,7 @@ if (argv.n) {
 
 } else if (argv.u){
     var answer=argv.u;
-    rl.question('Indique cual es su nombre de usuario, luego pulse enter y escriba su password(se veráde forma oculta): ', (answer) => {
+    //rl.question('Indique cual es su nombre de usuario, luego pulse enter y escriba su password(se veráde forma oculta): ', (answer) => {
   // TODO: Log the answer in a database
   //console.log('Thank you for your valuable feedback:', answer);
 function puts(error, stdout, stderr) {
@@ -75,7 +75,7 @@ var id = Math.floor((Math.random() * 10000) + 1)
 var prueba = exec("curl -u " + answer + " -d '{\"scopes\": [\"repo\", \"user\"], \"note\":"+id+"}' https://api.github.com/authorizations",puts);
 //console.log(prueba)
   rl.close();
-});
+//});
 
 
 } else {
