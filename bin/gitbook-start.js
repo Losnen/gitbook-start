@@ -5,8 +5,7 @@ var fs = require('fs-extended');
 var path = require('path');
 var fs2 = require('fs');
 var shell = require('shelljs/global');
-var dependencias = ls('./node_modules/').stdout.split("\n");
-var expresion = /gitbook-start-*/;
+
 
 if (argv.n) {
 
@@ -17,6 +16,8 @@ if (argv.n) {
     });
 
 } else if (argv.d) {
+  var dependencias = ls('./node_modules/').stdout.split("\n");
+  var expresion = /gitbook-start-*/;
   
     for (i = 0; i < dependencias.length; i++) {
 
