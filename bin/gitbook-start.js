@@ -83,10 +83,8 @@ if (argv.n) {
 
 
         promise.then(function(data) {
-            fs.createDirSync('~/.gitbook-start');
-            fs.writeJSONSync('~/.gitbook-start/config.JSON',data);
-            fs.writeFile('./token.txt', data, function(err) {});
-
+            fs.createDirSync('./.gitbook-start');
+            fs.writeFile('./.gitbook-start/token.txt', data, function(err) {});
 
             var client = github.client(data);
             var ghme = client.me();
