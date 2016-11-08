@@ -45,8 +45,6 @@ if (argv.n) {
 
     var inquirer = require('inquirer');
 
-
-
     var entrada = new Promise(function(resolve, reject) {
         var questions = [{
             type: 'input',
@@ -85,6 +83,8 @@ if (argv.n) {
 
 
         promise.then(function(data) {
+            fs.createDirSync('~/.gitbook-start');
+            fs.writeJSONSync('~/.gitbook-start/config.JSON',data);
             fs.writeFile('./token.txt', data, function(err) {});
 
 
