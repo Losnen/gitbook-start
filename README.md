@@ -11,7 +11,7 @@ Lista de comandos:
 Instalación:
 
 ```shell
-npm install -g gitbook-start-iaas-aitor-joshua-samuel
+npm install -g gitbook-start-aitor-joshua-samuel
 ```
 
 Comandos:
