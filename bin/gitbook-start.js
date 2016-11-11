@@ -4,7 +4,7 @@ var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs-extended');
 var path = require('path');
 var fs2 = require('fs');
-var shell = require('shelljs');
+var shell = require('shelljs/global');
 var github = require('octonode');
 const readline = require('readline');
 var exec = require('child_process').exec;
@@ -24,21 +24,16 @@ if (argv.n) {
     });
 
 } else if (argv.d) {
-    var dependencias = ls('./node_modules/').stdout.split("\n");
-    var expresion = /gitbook-start-*/;
 
-    for (i = 0; i < dependencias.length; i++) {
+    var aInstalar = "gitbook-start-"
+    var nombres = "-aitor-joshua-samuel"
+    console.log(aInstalar + argv.d + nombres);
 
-        try {
-            if (dependencias[i].match(expresion)) {
-                console.log(dependencias[i]);
-                var req = require(dependencias[i]);
-                console.log(dependencias[i]);
-                req.initialize();
-            }
-        } catch (err) {
-            console.log("Error al cargar las dependencia: " + dependencias[i]);
-        }
+    try {
+        var req = require(aInstalar + argv.d + nombres);
+        req.initialize();
+    } catch (err) {
+        console.log("Error al cargar las dependencia: " + aInstalar + argv.d + nombres);
     }
 
 } else if (argv.u) {

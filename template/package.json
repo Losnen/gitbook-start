@@ -37,8 +37,8 @@
         "gitbook": "^2.1.0"
     },
     "dependencies": {
-        "gitbook-start-heroku-aitor-joshua-samuel": "0.1.0",
-        "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "0.0.9",
+        "gitbook-start-heroku-aitor-joshua-samuel": "1.0.1",
+        "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "1.0.2",
         "gulp": "^3.9.1",
         "gulp-deploy-git": "^0.5.3",
         "gulp-gh-pages": "^0.5.4",

@@ -6,6 +6,9 @@ Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un li
 
 Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el Heroku.
 
+En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
+```gitbook-start-nombre-del-plugin-aitor-joshua-samuel```
+
 Lista de comandos:
 
 Instalación:
@@ -22,7 +25,6 @@ gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios
 gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro, links de plugin recomendados en el apartado repositorio.
 gitbook-stard -u [NOMBRE REPO] -> Crea tu repositorio en github.
 gulp deploy-github --> despliega tu libro en github con una tarea de gulp
-gulp deploy --> Despliega tu libro en la rama gh-pages
 ```
 
 ##Autores
