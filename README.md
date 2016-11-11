@@ -9,6 +9,11 @@ Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el 
 En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
 ```gitbook-start-nombre-del-plugin-aitor-joshua-samuel```
 
+Y deberá de contar con dos métodos:
+
+1. El primero un método intialize en el que se inicialice lo que usted quiera hacer con su plugin.
+2. El segundo un deploy que añada una tarea de gulp para realizar la tarea que usted requiera con su plugin.
+
 Lista de comandos:
 
 Instalación:
@@ -36,10 +41,12 @@ gulp deploy-github --> despliega tu libro en github con una tarea de gulp
 
 ##Repositorio
 
-* [Repositorio de entrega del main](https://github.com/ULL-ESIT-SYTW-1617/practica-plugins-heroku-aitor-joshua-samuel)
-* [Repositorio de entrega del plugin](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-aitor-joshua-samuel)
+* [Repositorio de entrega del main](https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-aitor-joshua-samuel)
+* [Repositorio de entrega del plugin heroku](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-aitor-joshua-samuel)
+* [Repositorio de entrega del plugin iaas](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
 * [Enlace a NPM del main](https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel)
-* [Enlace a NPM del plugin](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
+* [Enlace a NPM del plugin heroku](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
+* [Enlace a NPM del plugin iaas](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
 
 ##Enlaces de interés
 * [La práctica en gitbook](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)

@@ -58,7 +58,6 @@ if (argv.n) {
 
     entrada.then(function(data) {
 
-        console.log(data.usr);
         var token_;
         var promise = new Promise(function(resolve, reject) {
             github.auth.config({
@@ -69,7 +68,7 @@ if (argv.n) {
                 note: 'Token repo Gitbook'
             }, (err, id, token) => {
                 if (err) {
-                    reject(Error(err)); // status is not 200 OK, so reject
+                    reject(Error(err));
                 } else {
                     resolve(token);
                 }
