@@ -2,11 +2,9 @@
 
 ##¿Qué hace el módulo?
 
-Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un libro en gitbook.
-
-Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el Heroku.
-
-En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
+* Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un libro en gitbook.
+* Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el Heroku.
+* En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
 
 ```
 gitbook-start-nombre-del-plugin-aitor-joshua-samuel
@@ -14,10 +12,10 @@ gitbook-start-nombre-del-plugin-aitor-joshua-samuel
 
 Y deberá de contar con dos métodos:
 
-1. El primero un método intialize en el que se inicialice lo que usted quiera hacer con su plugin.
-2. El segundo un deploy que añada una tarea de gulp para realizar la tarea que usted requiera con su plugin.
+1. El primero un método intialize que prepare el directorio para lo que usted desee hacer con su plugin.
+2. El segundo un método deploy que añada una tarea de gulp para realizar la tarea que usted requiera con su plugin.
 
-####Lista de comandos:
+###Lista de comandos:
 
 #####Instalación:
 

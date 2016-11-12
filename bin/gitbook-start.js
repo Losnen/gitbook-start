@@ -19,7 +19,6 @@ if (argv.n) {
 
     var aInstalar = "gitbook-start-"
     var nombres = "-aitor-joshua-samuel"
-    console.log(aInstalar + argv.d + nombres);
 
     try {
         var req = require(aInstalar + argv.d + nombres);
