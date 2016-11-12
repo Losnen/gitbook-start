@@ -3,16 +3,8 @@
 var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs-extended');
 var path = require('path');
-var fs2 = require('fs');
 var shell = require('shelljs/global');
 var github = require('octonode');
-const readline = require('readline');
-var exec = require('child_process').exec;
-
-/*const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});*/
 
 
 if (argv.n) {
@@ -114,6 +106,9 @@ if (argv.n) {
 
 } else {
 
-    console.log("Añada un comando correcto");
-    console.log("-> -n [NOMBRE DE DIR] (Crea la estructura de directorios)");
+    console.log("Comandos válidos:");
+    console.log("gitbook-start -h --> Opción de ayuda");
+    console.log("gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios");
+    console.log("gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro (Ver la documentación sobre plugins)");
+    console.log("gitbook-stard -u [NOMBRE REPO] -> Crea tu repositorio en github");
 }
