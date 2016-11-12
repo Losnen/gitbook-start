@@ -1,4 +1,4 @@
-#Práctica: Creación de un Paquete NPM
+#Paquete Gitbook Start
 
 ##¿Qué hace el módulo?
 
@@ -7,30 +7,39 @@ Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un li
 Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el Heroku.
 
 En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
-```gitbook-start-nombre-del-plugin-aitor-joshua-samuel```
+
+```
+gitbook-start-nombre-del-plugin-aitor-joshua-samuel
+```
 
 Y deberá de contar con dos métodos:
 
 1. El primero un método intialize en el que se inicialice lo que usted quiera hacer con su plugin.
 2. El segundo un deploy que añada una tarea de gulp para realizar la tarea que usted requiera con su plugin.
 
-Lista de comandos:
+####Lista de comandos:
 
-Instalación:
+#####Instalación:
 
 ```shell
 npm install -g gitbook-start-aitor-joshua-samuel
 ```
 
-Comandos:
+#####Comandos:
 
 ```shell
 gitbook-start -h --> Opción de ayuda
 gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios
-gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro, links de plugin recomendados en el apartado repositorio.
+gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro.
 gitbook-stard -u [NOMBRE REPO] -> Crea tu repositorio en github.
 gulp deploy-github --> despliega tu libro en github con una tarea de gulp
 ```
+
+#####Plugins:
+
+
+* [Enlace a NPM del plugin heroku](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
+* [Enlace a NPM del plugin iaas](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
 
 ##Autores
 
