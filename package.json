@@ -47,7 +47,7 @@
   "dependencies": {
     "fs-extended": "^0.2.1",
     "fs-extra": "^0.22.1",
-    "gitbook-start-heroku-aitor-joshua-samuel": "1.0.3",
+    "gitbook-start-heroku-aitor-joshua-samuel": "1.0.4",
     "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "1.0.2",
     "inquirer": "^1.2.2",
     "minimist": "^1.2.0",
