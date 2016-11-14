@@ -83,7 +83,7 @@ if (argv.n) {
                 console.log("Usuario: " + body.login);
                 require('simple-git')()
                     .init()
-                    .addRemote('porigin', 'git@github.com:' + body.login + '/' + argv.u + '.git')
+                    .addRemote('origin', 'git@github.com:' + body.login + '/' + argv.u + '.git')
             });
 
             ghme.repo({
