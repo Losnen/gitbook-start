@@ -1,40 +1,26 @@
-##¿Qué hace el módulo?
+#Manual del paquete gitbook-start-aitor-joshua-samuel
 
-Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un libro en gitbook con scripts
+* [Enlace a NPM del paquete](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
 
-
-##Manual del paquete
-
-[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
-
-Lista de comandos:
-
-Instalación:
+#####Instalación:
 
 ```shell
 npm install -g gitbook-start-aitor-joshua-samuel
 ```
 
-Ayuda:
+#####Comandos:
 
 ```shell
-gitbook-start -h
+gitbook-start -h --> Opción de ayuda
+gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios
+gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro.
+gitbook-start -u [NOMBRE REPO] -> Crea tu repositorio en github.
+gulp deploy-github --> Pushea tu libro a github.
+gulp deploy-gh-pages --> Despliega tu libro en gh-pages.
 ```
 
-Desplegar los ficheros
+#####Plugins:
 
-```shell
-gitbook-start -n [nombre del proyecto]
-```
 
-Desplegar en github
-
-```shell
-gulp deploy-github
-```
-
-Despliegue en gh-pages
-
-```shell
-gulp deploy
-```
+* [Enlace a NPM del plugin heroku](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
+* [Enlace a NPM del plugin iaas](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)

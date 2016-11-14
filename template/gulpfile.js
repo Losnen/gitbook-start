@@ -1,16 +1,15 @@
 //Dependencias
 var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
-var exec = require('child_process').exec;
-var shell = require('gulp-shell');
 
-gulp.task('deploy', function() {
+gulp.task('deploy-gh-pages', function() {
   return gulp.src(['_book/*/*/*','_book/*/*','_book/*'])
     .pipe(ghPages());
 });
 
-gulp.task('deploy-github', shell.task([
-  'git add .',
-  'git commit -m "modificando"',
-  'git push origin master'
-]));
+gulp.task('deploy-github', function() {
+  require('simple-git')()
+          .add('.')
+          .commit("commit")
+          .push(['origin', 'master'], function() {});
+});

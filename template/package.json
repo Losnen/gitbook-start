@@ -1,7 +1,7 @@
 {
-    "name": "gitbook-boilerplate",
+    "name": "mi libro",
     "version": "0.0.1",
-    "description": "GitBook Boilerplate",
+    "description": "demo de mi libro",
     "main": "index.js",
     "scripts": {
         "generate-gitbook": "./scripts/losh generate-gitbook",
@@ -20,7 +20,7 @@
     },
     "keywords": [
         "gitbook",
-        "boilerplate",
+        "book",
         "starter"
     ],
     "author": "Steven Enten <steven@enten.fr>",
@@ -42,7 +42,8 @@
         "gulp": "^3.9.1",
         "gulp-deploy-git": "^0.5.3",
         "gulp-gh-pages": "^0.5.4",
-        "gulp-shell": "^0.5.2"
+        "simple-git": "^1.62.0"
+
     },
     "engines": {
         "node": "5.9.1"

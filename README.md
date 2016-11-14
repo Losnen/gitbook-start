@@ -29,8 +29,9 @@ npm install -g gitbook-start-aitor-joshua-samuel
 gitbook-start -h --> Opción de ayuda
 gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios
 gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro.
-gitbook-stard -u [NOMBRE REPO] -> Crea tu repositorio en github.
-gulp deploy-github --> despliega tu libro en github con una tarea de gulp
+gitbook-start -u [NOMBRE REPO] -> Crea tu repositorio en github.
+gulp deploy-github --> Pushea tu libro a github.
+gulp deploy-gh-pages --> Despliega tu libro en gh-pages.
 ```
 
 #####Plugins:
