@@ -2,6 +2,7 @@
 
 var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs-extended');
+var Fs = require('fs');
 var path = require('path');
 var shell = require('shelljs/global');
 var github = require('octonode');
@@ -11,9 +12,16 @@ if (argv.n) {
 
     var second_path = path.resolve(__dirname, "../template")
     fs.copyDir(second_path, "./" + argv.n, function(err) {
-        if (err)
-            console.error(err)
+        if (err) {
+            console.error(err);
+        }
+        Fs.appendFile(argv.n + '/.gitignore', "DS_Store\nnode_modules\n.gitbook-start\n", function(err) {
+            if (err) {
+                console.error(err);
+            }
+        });
     });
+
     console.log("Estructura de directorios generada con éxito.");
 
 } else if (argv.d) {

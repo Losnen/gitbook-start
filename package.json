@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-aitor-joshua-samuel",
-  "version": "3.2.1",
+  "version": "3.2.4",
   "description": "A cli for gitbook deploys",
   "main": "bin/gitbook-start.js",
   "bin": {
