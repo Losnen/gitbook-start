@@ -34,6 +34,7 @@ if (argv.n) {
         req.initialize();
         console.log("Desplegados los ficheros necesarios para " + argv.d);
     } catch (err) {
+        console.log(err);
         console.log("Error al cargar las dependencia: " + aInstalar + argv.d + nombres);
     }
 
