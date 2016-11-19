@@ -34,6 +34,16 @@ gulp deploy-github --> Pushea tu libro a github.
 gulp deploy-gh-pages --> Despliega tu libro en gh-pages.
 ```
 
+#####Ejemplo:
+
+```shell
+
+linux@user: gitbook-start -n mi-libro -> Despliega directorios para mi-libro
+Desplegada estructura de directorios
+linux@user: gitbook-start -d mi-plugin  -> Despliega el plugin mi-plugin
+linux@user: gitbook-start -u mi-repo -> Crea el repo y el token para mi-repo
+```
+
 #####Plugins:
 
 
