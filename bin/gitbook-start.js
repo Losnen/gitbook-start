@@ -25,14 +25,17 @@ if (argv.n) {
     console.log("Estructura de directorios generada con éxito.");
 
 } else if (argv.d) {
-
+    var param = "local";
     var aInstalar = "gitbook-start-"
     var nombres = "-aitor-joshua-samuel"
 
+    if(argv.p){
+      param = argv.p;
+    }
+
     try {
         var req = require(aInstalar + argv.d + nombres);
-        req.initialize();
-        console.log("Desplegados los ficheros necesarios para " + argv.d);
+        req.initialize(param);
     } catch (err) {
         console.log(err);
         console.log("Error al cargar las dependencia: " + aInstalar + argv.d + nombres);
