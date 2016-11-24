@@ -45,7 +45,7 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
-    "gitbook-start-heroku-aitor-joshua-samuel": "1.1.3",
+    "gitbook-start-heroku-aitor-joshua-samuel": "1.1.4",
     "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "1.1.2",
     "gulp": "^3.9.1",
     "gulp-deploy-git": "^0.5.3",
