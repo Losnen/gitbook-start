@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-aitor-joshua-samuel",
-  "version": "3.3.9",
+  "version": "3.4.0",
   "description": "A cli for gitbook deploys",
   "main": "bin/gitbook-start.js",
   "bin": {
@@ -48,7 +48,7 @@
     "fs-extended": "^0.2.1",
     "fs-extra": "^0.22.1",
     "gitbook-start-heroku-aitor-joshua-samuel": "1.1.6",
-    "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "1.2.2",
+    "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "2.0.0",
     "inquirer": "^1.2.2",
     "minimist": "^1.2.0",
     "octonode": "^0.7.6",
