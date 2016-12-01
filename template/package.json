@@ -52,6 +52,7 @@
     "gulp-gh-pages": "^0.5.4",
     "json-update": "^3.0.0",
     "morgan": "^1.7.0",
+    "mysql": "^2.12.0",
     "octonode": "^0.7.6",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0",
