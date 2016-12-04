@@ -9,7 +9,7 @@ if (argv.n) {
 
 } else if (argv.d) {
 
-  cli.plugin.deployPlugin(argv.d);
+  cli.plugin.deployPlugin(argv.d,argv.p);
 
 } else if (argv.u) {
 

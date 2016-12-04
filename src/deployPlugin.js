@@ -2,13 +2,10 @@ var npmInstallPackage = require('npm-install-package');
 var path = require('path');
 
 exports.deployPlugin = (nombrePlugin, pOption) => {
-    var param = "local";
     var aInstalar = "gitbook-start-";
     var nombres = "-aitor-joshua-samuel";
     var plugin = aInstalar + nombrePlugin + nombres;
-    if (pOption) {
-        param = pOption;
-    }
+
 
     var opts = {
         save: true,
@@ -26,7 +23,7 @@ exports.deployPlugin = (nombrePlugin, pOption) => {
         try {
             var dirPlugin = path.resolve(process.cwd(), 'node_modules', plugin);
             var req = require(dirPlugin);
-            req.initialize(param);
+            req.initialize(pOption);
         } catch (err) {
             console.log(err);
             console.log("Error al cargar las dependencia: " + plugin);
