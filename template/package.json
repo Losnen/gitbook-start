@@ -4,13 +4,10 @@
   "description": "demo de mi libro",
   "main": "index.js",
   "scripts": {
-    "generate-gitbook": "./scripts/losh generate-gitbook",
-    "generate-wiki": "./scripts/losh generate-wiki",
-    "build": "npm install && npm i gitbook-cli && npm run generate-gitbook && npm run generate-wiki",
-    "deploy-gitbook": "./scripts/losh deploy-gitbook",
-    "deploy-wiki": "./scripts/losh deploy-wiki",
-    "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
-    "version": "./scripts/losh version",
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "gh-pages": "gulp deploy-gh-pages",
+    "deploy": "gulp deploy-github",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -45,8 +42,6 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
-    "gitbook-start-heroku-aitor-joshua-samuel": "1.1.6",
-    "gitbook-start-iaas-ull-es-aitor-joshua-samuel": "1.1.2",
     "gulp": "^3.9.1",
     "gulp-deploy-git": "^0.5.3",
     "gulp-gh-pages": "^0.5.4",
