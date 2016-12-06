@@ -8,8 +8,7 @@ exports.deployPlugin = (nombrePlugin, pOption) => {
 
 
     var opts = {
-        save: true,
-        cache: true
+        save: true
     };
 
     console.log("Instalando el plugin " + plugin + "...");
