@@ -1,19 +1,23 @@
 #! /usr/bin/env node
 
-var argv = require('minimist')(process.argv.slice(2));
-var cli = require('../src');
+const argv = require('minimist')(process.argv.slice(2));
+const cli = require('../build');
 
 if (argv.n) {
 
-  cli.deploy.deployTemplate(argv.n);
+  cli.template(argv.n);
 
 } else if (argv.d) {
 
-  cli.plugin.deployPlugin(argv.d,argv.p);
+  cli.plugin(argv.d,argv.p);
 
-} else if (argv.u) {
+} else if (argv.i) {
 
-  cli.githubRepo.createRepo(argv.u);
+  cli.init();
+
+} else if (argv.i) {
+
+  cli.repo(argv.u);
 
 } else {
 
