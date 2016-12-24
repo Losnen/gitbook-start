@@ -18,17 +18,17 @@ const repo = async(datos) => {
 }
 
 function createRepo(datos, token) {
-
+    console.log(datos + " token: " + token);
     return new Promise((resolve, reject) => {
 
         let client = github.client(token);
         let ghme = client.me();
-
         ghme.repo({
-            "name": datos.r,
+            "name": datos,
             "description": "Repo created by gitbook-start",
         }, (err, status, body, headers) => {
             if (err) {
+              console.log("hola dentro");
                 if (err) console.log("Error: " + err.statusCode + ": " + err.message);
                 reject(err);
             } else {

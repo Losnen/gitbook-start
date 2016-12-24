@@ -2,7 +2,7 @@ import fs from 'fs-extended';
 import Fs from 'fs';
 import path from 'path';
 
-const template = () => {
+const template = (nameDir) => {
 
   let second_path = path.resolve(__dirname, "../template");
   fs.copyDir(second_path, "./" + nameDir, function(err) {
