@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A cli for gitbook deploys",
   "main": "bin/gitbook-start.js",
   "bin": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-aitor-joshua-samuel"
+    "url": "https://github.com/Losnen/gitbook-start"
   },
   "keywords": [
     "gitbook",
@@ -32,9 +32,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-aitor-joshua-samuel/issues"
+    "url": "https://github.com/Losnen/gitbook-start/issues"
   },
-  "homepage": "https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel",
+  "homepage": "https://www.npmjs.com/package/gitbook-start",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
