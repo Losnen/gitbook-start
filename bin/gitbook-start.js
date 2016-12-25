@@ -5,7 +5,12 @@ const cli = require('../build');
 
 if (argv.n) {
 
-    cli.template(argv.n, argv.a, argv.e);
+    let nombre = argv.a + " ";
+    for (let i = 0; i < argv._.length; i++) {
+        nombre = nombre + argv._[i] + " ";
+    }
+
+    cli.template(argv.n, nombre, argv.e);
 
 } else if (argv.d) {
 
@@ -48,8 +53,8 @@ if (argv.n) {
 
 } else {
 
-  console.log(' ');
-  console.log('Opción inválida, introduca gitbook-start -h para ver los comandos válidos');
-  console.log(' ');
+    console.log(' ');
+    console.log('Opción inválida, introduca gitbook-start -h para ver los comandos válidos');
+    console.log(' ');
 
 }
