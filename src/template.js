@@ -1,22 +1,72 @@
-import fs from 'fs-extended';
-import Fs from 'fs';
+import Fs from 'fs-extended';
+import fs from 'fs';
 import path from 'path';
+import ejs from 'ejs';
 
-const template = (nameDir) => {
+const template = async(libro, autor, email) => {
 
-  let second_path = path.resolve(__dirname, "../template");
-  fs.copyDir(second_path, "./" + nameDir, function(err) {
-      if (err) {
-          console.error(err);
-      }
-      Fs.appendFile(nameDir + '/.gitignore', "DS_Store\nnode_modules\n.gitbook-start\n", (err) => {
-          if (err) {
-              console.error(err);
-          }
-      });
-  });
+    if (!fs.existsSync(process.cwd() + '/' + libro)) {
+        let data = {
+            author: autor || 'TODO: poner nombre',
+            email: email || 'TODO: poner correo',
+            repo: 'TODO: Poner el enlace del repo',
+            name: libro
+        }
 
-  console.log("Estructura de directorios generada con éxito.");
+        let secondPath = path.resolve(__dirname, "../template");
+        let files = fs.readdirSync(secondPath);
+
+        fs.mkdirSync(process.cwd() + '/' + libro);
+
+        for (let i = 0; i < files.length; i++) {
+            let dir = secondPath + '/' + files[i];
+            let isDir = await fileOrDirectory(dir);
+            if (!isDir) {
+                let file = fs.readFileSync(dir, "utf8");
+
+                if (path.extname(files[i]) == '.ejs') {
+                    files[i] = files[i].slice(0, -4);
+                    file = ejs.render(file, data);
+                }
+
+                fs.writeFileSync(process.cwd() + '/' + libro + '/' + files[i], file);
+
+            } else {
+
+                Fs.copyDirSync(secondPath + '/' + files[i], "./" + libro + '/' + files[i]);
+            }
+        }
+
+        console.log("Estructura de directorios generada con éxito.");
+
+    } else {
+
+      console.log("Ya se ha creado el libro " + libro + " en este directorio." );
+
+    }
+
 }
 
-export { template };
+function fileRead(dir) {
+    return (fs.readFileSync(dir, "utf8"));
+}
+
+function fileOrDirectory(dir) {
+    return new Promise((resolve, reject) => {
+        fs.stat(dir, (err, stats) => {
+
+            if (stats.isFile()) {
+                resolve(false);
+            }
+            if (stats.isDirectory()) {
+                resolve(true);
+            }
+
+        });
+    });
+
+}
+
+export {
+    template
+};

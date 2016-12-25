@@ -5,7 +5,7 @@ const cli = require('../build');
 
 if (argv.n) {
 
-    cli.template(argv.n);
+    cli.template(argv.n, argv.a, argv.e);
 
 } else if (argv.d) {
 
@@ -32,11 +32,11 @@ if (argv.n) {
     console.log(' ');
     console.log('Options:');
     console.log(' ');
-    console.log("gitbook-start -h                   \t Opción de ayuda");
-    console.log("gitbook-start -n [NOMBRE PROYECTO] \t Despliega un directorio con todo lo necesario para comenzar a escribir el libro");
-    console.log("gitbook-start -d [PLUGIN]          \t Te añade el plugin para el despliegue del libro (Ver la documentación sobre plugins)");
-    console.log("gitbook-start -i                   \t Crea el token de github");
-    console.log("gitbook-start -r [NOMBRE REPO]     \t Crea tu repositorio en github");
+    console.log("gitbook-start -h                                             \t Opción de ayuda");
+    console.log("gitbook-start -n [Nombre del Proyecto] -a [Autor] -e [Email] \t Despliega un directorio con todo lo necesario para comenzar a escribir el libro");
+    console.log("gitbook-start -d [PLUGIN]                                    \t Te añade el plugin para el despliegue del libro (Ver la documentación sobre plugins)");
+    console.log("gitbook-start -i                                             \t Crea el token de github");
+    console.log("gitbook-start -r [NOMBRE REPO]                               \t Crea tu repositorio en github");
     console.log(' ');
 
 } else {

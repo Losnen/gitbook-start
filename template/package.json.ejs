@@ -1,0 +1,29 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "Gitbook <%= name %>",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "gh-pages": "gulp deploy-gh-pages",
+    "deploy": "gulp deploy-github",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "7.1.0"
+  },
+  "author": "<%= author %> <<%= email %>>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-shell": "^0.5.2"
+  },
+  "dependencies": {
+    "fs-extended": "^0.2.1",
+    "fs-extra": "^0.22.1",
+    "gulp-deploy-git": "^0.5.3",
+    "simple-git": "^1.62.0"
+  }
+}

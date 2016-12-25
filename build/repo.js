@@ -72,7 +72,6 @@ function createRepo(datos, token) {
             "description": "Repo created by gitbook-start"
         }, function (err, status, body, headers) {
             if (err) {
-                console.log("hola dentro");
                 if (err) console.log("Error: " + err.statusCode + ": " + err.message);
                 reject(err);
             } else {
