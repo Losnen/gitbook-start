@@ -1,35 +1,28 @@
 import "babel-polyfill";
 import fs from 'fs';
+import Fs from 'fs-extended';
 import path from 'path';
 import npmInstallPackage from 'npm-install-package';
 
-const plugin = async(nombrePlugin, pOption) => {
+const plugin = async() => {
 
-  let aInstalar = "gitbook-start-";
-  let nombres = "-aitor-joshua-samuel";
-  let plugin = aInstalar + nombrePlugin + nombres;
-
-
+  let secondPath = path.resolve(__dirname, "../server");
+  let deps = ["express"];
   let opts = {
       save: true
   };
 
-  console.log("Instalando el plugin " + plugin + "...");
+  console.log("Desplegando el servidor e instalando dependencias...");
 
-  npmInstallPackage(plugin, opts, (err) => {
+  npmInstallPackage(deps, opts, (err) => {
       if (err) {
           console.log(err);
       }
-      console.log(plugin + " instalado correctamente.");
-
-      try {
-          let dirPlugin = path.resolve(process.cwd(), 'node_modules', plugin);
-          let req = require(dirPlugin);
-          req.initialize(pOption);
-      } catch (err) {
-          console.log(err);
-          console.log("Error al cargar las dependencia: " + plugin);
-      }
+      console.log("Dependencias instaladas");
+      console.log(secondPath);
+      Fs.copyFileSync(secondPath + '/server.js', process.cwd() + '/server.js');
+      console.log("Servidor desplegado");
+      console.log("Ejecute node server.js para correr el servidor")
   });
 }
 

@@ -11,8 +11,9 @@ Gitbook Start despliega una serie de directorios para facilitar el despliegue de
 ## Comandos:
 
 * ```gitbook-start -h  Opción de ayuda```
+* ```gitbook-start -v  versión del paquete```
 * ```gitbook-start -n [Nombre del Proyecto] -a [Autor] -e [Email]``` Despliega un directorio con todo lo necesario para comenzar a escribir el libro
-* ```gitbook-start -d [PLUGIN]``` Te añade un servidor express para desplegar tu libro
+* ```gitbook-start -d ``` Te añade un servidor express para desplegar tu libro
 * ```gitbook-start -i``` Crea el token de github
 * ```gitbook-start -r [NOMBRE REPO]``` Crea tu repositorio en github
 
