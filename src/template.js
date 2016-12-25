@@ -7,9 +7,10 @@ const template = async(libro, autor, email) => {
 
     if (!fs.existsSync(process.cwd() + '/' + libro)) {
         let data = {
-            author: autor || 'TODO: poner nombre',
-            email: email || 'TODO: poner correo',
-            repo: 'TODO: Poner el enlace del repo',
+            author: autor || 'TODO: nombre',
+            email: email || 'TODO: email',
+            repo: 'TODO: Link del repo',
+            pagina: 'TODO: Pagina del libro',
             name: libro
         }
 
@@ -67,6 +68,4 @@ function fileOrDirectory(dir) {
 
 }
 
-export {
-    template
-};
+export { template };

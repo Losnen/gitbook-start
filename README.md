@@ -1,72 +1,45 @@
-#Paquete Gitbook Start
+# Gitbook Start
 
-##¿Qué hace el módulo?
+## ¿Qué hace el módulo?
 
-* Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un libro en gitbook.
-* Además existe un plugin que te ayuda a hacer el despliegue en iaas.ull.es y el Heroku.
-* En el caso de que usted quiera incorporar su propio plugin debería hacerlo con el siguiente formato:
+Gitbook Start despliega una serie de directorios para facilitar el despliegue de un libro de Gitbook.
 
-```
-gitbook-start-nombre-del-plugin-aitor-joshua-samuel
-```
-
-Y deberá de contar con dos métodos:
-
-1. El primero un método intialize que prepare el directorio para lo que usted desee hacer con su plugin.
-2. El segundo un método deploy que añada una tarea de gulp para realizar la tarea que usted requiera con su plugin.
-
-###Lista de comandos:
-
-#####Instalación:
+## Instalación:
 
 ```shell
 npm install -g gitbook-start-aitor-joshua-samuel
 ```
 
-#####Comandos:
+## Comandos:
 
-```shell
-gitbook-start -h --> Opción de ayuda
-gitbook-start -n [NOMBRE PROYECTO] --> Despliega una serie de directorios
-gitbook-start -d [PLUGIN] -->  Te añade el plugin para el despliegue del libro.
-gitbook-start -u [NOMBRE REPO] -> Crea tu repositorio en github.
-gulp deploy-github --> Pushea tu libro a github.
-gulp deploy-gh-pages --> Despliega tu libro en gh-pages.
-gulp serve ->
-gulp build ->
-```
+```gitbook-start -h  Opción de ayuda```
 
-#####Ejemplo:
+```gitbook-start -n [Nombre del Proyecto] -a [Autor] -e [Email]``` Despliega un directorio con todo lo necesario para comenzar a escribir el libro
 
-```shell
+```gitbook-start -d [PLUGIN]``` Te añade un servidor express para desplegar tu libro
 
-linux@user: gitbook-start -n mi-libro -> Despliega directorios para mi-libro
-Desplegada estructura de directorios
-linux@user: gitbook-start -d mi-plugin  -> Despliega el plugin mi-plugin
-linux@user: gitbook-start -u mi-repo -> Crea el repo y el token para mi-repo
-```
+```gitbook-start -i``` Crea el token de github
 
-#####Plugins:
+```gitbook-start -r [NOMBRE REPO]``` Crea tu repositorio en github
+
+## Tareas
+
+```gulp deploy-github || npm run deploy``` Sube los archivos al repo de gitub
+
+```gulp deploy-gh-pages || npm run gh-pages``` Sube la carpeta de los HTML a la rama gh-pages
+
+```gulp serve || npm run serve``` Crea un servidor para ver el libro
+
+```gulp build || npm run build``` Genera los HTML del libro.
 
 
-* [Enlace a NPM del plugin heroku](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
-* [Enlace a NPM del plugin iaas](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
-
-##Autores
+## Autores
 
 1. [Aitor Bernal Falcón](http://chinegua.github.io/)
 2. [Samuel Ramos Barroso](http://losnen.github.io/)
 3. [Joshua Pérez García](http://joshuape.github.io/)
 
 
-##Repositorio
+## Repositorio
 
-* [Repositorio de entrega del main](https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-aitor-joshua-samuel)
-* [Repositorio de entrega del plugin heroku](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-aitor-joshua-samuel)
-* [Repositorio de entrega del plugin iaas](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
-* [Enlace a NPM del main](https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel)
-* [Enlace a NPM del plugin heroku](https://www.npmjs.com/package/gitbook-start-heroku-aitor-joshua-samuel)
-* [Enlace a NPM del plugin iaas](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
-
-##Enlaces de interés
-* [La práctica en gitbook](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
+* [Enlace a NPM](https://www.npmjs.com/package/gitbook-start)
